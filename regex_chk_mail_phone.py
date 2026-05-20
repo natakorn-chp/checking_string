@@ -1,13 +1,14 @@
 import re
 
 def chkMailForm(txt):
+    
     if re.match(r"(.*)@testmail.[com|net]{3}\b", txt):
         print('Email format is correct:',txt)
     else:
         print('Email format is incorrect:',txt)
 
 def chkPhonNum(txt):
-    # print(txt)
+
     if re.match(r"^02[0-9]{7}\b", txt):
       print('Phone nubmer format is correct:',txt)
     elif re.match(r"^08[0-9]{8}\b", txt):
@@ -22,5 +23,5 @@ def main():
     for val in email:
         chkMailForm(val)
 
-    # for val in phone_number:
-    #     chkPhonNum(val)
+    for val in phone_number:
+        chkPhonNum(val)
